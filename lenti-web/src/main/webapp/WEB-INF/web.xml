@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Copyright © NORD/LB Norddeutsche Landesbank Girozentrale, Hannover - Alle Rechte vorbehalten -
+  -->
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  id="WebApp">
+
+  <display-name>Lenti</display-name>
+
+<!--
+  &lt;!&ndash;GlobalCash-Benutzer (Bearbeiter) SWIFT Kontoauszug(42)&ndash;&gt;
+  <security-role>
+    <role-name>NIT-9242</role-name>
+  </security-role>
+  &lt;!&ndash;GlobalCash-Leser (43)&ndash;&gt;
+  <security-role>
+    <role-name>NIT-9243</role-name>
+  </security-role>
+  &lt;!&ndash;GlobalCash reine Lesekompetenz GWG (44)&ndash;&gt;
+  <security-role>
+    <role-name>NIT-9244</role-name>
+  </security-role>
+  &lt;!&ndash;GC-Leser-Nachrichteninhalt &ndash;&gt;
+  <security-role>
+    <role-name>NIT-9270</role-name>
+  </security-role>
+  &lt;!&ndash;DTAZV, SEPA &ndash;&gt;
+  <security-role>
+    <role-name>NIT-9271</role-name>
+  </security-role>
+  &lt;!&ndash;Zahlungsauftrag MT_101 &ndash;&gt;
+  <security-role>
+    <role-name>NIT-9272</role-name>
+  </security-role>
+  &lt;!&ndash;Kontoauszug Ausgang für ELKO &ndash;&gt;
+  <security-role>
+    <role-name>NIT-9273</role-name>
+  </security-role>
+  &lt;!&ndash;Kontoauszug Ausgang für Corona &ndash;&gt;
+  <security-role>
+    <role-name>NIT-9274</role-name>
+  </security-role>
+  &lt;!&ndash;GC-Pflege Pflege Ignore Konten&ndash;&gt;
+  <security-role>
+    <role-name>NIT-9275</role-name>
+  </security-role>
+  &lt;!&ndash;GC-Pflege Pflege FileAct Stored-and-Forward&ndash;&gt;
+  <security-role>
+    <role-name>NIT-9276</role-name>
+  </security-role>
+  &lt;!&ndash;Kunden lesen&ndash;&gt;
+  <security-role>
+    <role-name>NIT-8301</role-name>
+  </security-role>
+-->
+
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>access to everything</web-resource-name>
+      <url-pattern>/faces/*</url-pattern>
+      <url-pattern>/page/*</url-pattern>
+      <url-pattern>/index.xhtml</url-pattern>
+      <http-method>GET</http-method>
+      <http-method>POST</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <!--suppress WebProperties -->
+      <role-name>*</role-name>
+    </auth-constraint>
+  </security-constraint>
+</web-app>
